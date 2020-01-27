@@ -95,10 +95,10 @@ abstract class Sprite
   // bounces off the walls
   void move()
   {
-    x += dx;
-    y += dy;
+    x += -dx;
+    y += -dy;
     
-    // make sure we don't go out of bounds
+    // make sure we don't go out of bounds-limits on where it can and can't go
     if(x < 0)
     { 
       x += width;

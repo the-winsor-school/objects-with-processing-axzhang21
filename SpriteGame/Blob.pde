@@ -11,6 +11,7 @@ class Blob extends Sprite
   color myColor;
   
   // Create a blob with default velocity.
+  //constructor
   Blob(int x, int y, int r, color c)
   {
     // super calls the Sprite(x, y) constructor method.
