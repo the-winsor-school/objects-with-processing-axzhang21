@@ -35,6 +35,7 @@ class Blob extends Sprite
   void move()
   {
     if(this.collidesWith(color(128, 0, 200)))
+    
     {
       dx *= -1;
       dy *= -1;
@@ -50,5 +51,6 @@ class Blob extends Sprite
   {
     fill(myColor);
     ellipse(x, y, radius, radius);
+    
   }
 }
