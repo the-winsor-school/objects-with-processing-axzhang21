@@ -37,10 +37,21 @@ class Vector2 //this is the memory and the properties here are the things I need
     
   }
   
-  //VectorSubtract
+  //compute the dot product x1+x2 + y1*y2
+  float dotProduct(Vector2 other) //interface
+  {
+    float prod = this.x * other.x + this.y *other.y;//implementation
+    return prod;
+  }
+  
   Vector2 subtract(Vector2 other)
   {
-    return new Vector2(this.x - other.x, this.y - other.y); //what does this mean/do?
+    return new Vector2(this.x - other.x, this.y - other.y);
+  }
+  
+  float magnitude()
+  {
+    return sqrt(x*x + y*y);
   }
 }
 
@@ -64,4 +75,3 @@ class Vector2 //this is the memory and the properties here are the things I need
  //println(mag(float x, float y));
  
  
-//"get magnitude" = set magnitude?

@@ -4,7 +4,7 @@
  * x, y, dx, and dy are all defined in the Sprite class and we get
  * all of those for free by using "extends Sprite"
  */
-class Blob extends Sprite
+class Blob extends Sprite //Blob is a sprite
 {
   // Blobs have a Radius and a color
   int radius;
@@ -16,8 +16,8 @@ class Blob extends Sprite
   {
     // super calls the Sprite(x, y) constructor method.
     super(x, y);
-    this.dx = 1;
-    this.dy = 1.5;
+    //this.dx = 1;
+    //this.dy = 1.5;
     myColor = c;
     radius = r;
   }
@@ -25,7 +25,7 @@ class Blob extends Sprite
   // Create a blob with a particular velocity vector.
   Blob(int x, int y, int r, float dx, float dy, color c)
   {
-    super(x, y, dx, dy);
+    super(x, y, dx, dy); //talk to the parent (Sprite)
     myColor = c;
     radius = r;
   }
@@ -37,8 +37,8 @@ class Blob extends Sprite
     if(this.collidesWith(color(128, 0, 200)))
     
     {
-      dx *= -1;
-      dy *= -1;
+      velocity.x *= -1;
+      velocity.y *= -1;
     }
     
     // because I don't want to rewrite all the code in the Sprite.move() method, I can call it here using "super"
@@ -50,7 +50,7 @@ class Blob extends Sprite
   void drawSprite()
   {
     fill(myColor);
-    ellipse(x, y, radius, radius);
+    ellipse(location.x, location.y, radius, radius);
     
   }
 }
