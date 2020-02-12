@@ -49,9 +49,30 @@ class Vector2 //this is the memory and the properties here are the things I need
     return new Vector2(this.x - other.x, this.y - other.y);
   }
   
-  float magnitude()
+  float magnitude() //float is when answer is number
   {
     return sqrt(x*x + y*y);
+  }
+  
+  Vector2 inverse() //Vector2 is when the returntype (answer) is a vector
+  {
+    return new Vector2(this.x * -1, this.y * -1);
+  }
+  
+  Vector2 scale(float s)
+  
+  {
+    return new Vector2(this.x * s, this.y * s);
+  }
+ 
+  Vector2 perpendicular()//doesn't need a parameter (stuff inside the parentheses)
+  {
+    return new Vector2(this.x, this.y * -1);
+  }
+ 
+  Vector2 unitVector()
+  {
+    return new Vector2(this.x / this.magnitude(), this.y / this.magnitude());
   }
 }
 
